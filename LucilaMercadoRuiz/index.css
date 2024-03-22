@@ -1,0 +1,38 @@
+body {
+    padding-top: 10%;
+    background-image: url(fondito.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.box1, h1 {
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    font-size: 60px;
+    font-family: Verdana;
+}
+
+.box1 {
+    background: #00000050;
+    height: 150px;
+    width: 500px;
+    align-content: center;
+}
+
+.box2 {
+    background-color: rgba(0, 0, 0, 0.521);
+    margin: 20px 500px 0 500px;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    padding: 3%;
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    border: solid #ffffff7e;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
