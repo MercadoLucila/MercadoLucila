@@ -23,13 +23,12 @@ h1 {
 
 @font-face {
     font-family: 'Titulo';
-    src: url('C:\Luz\MercadoLucila\LucilaMercadoRuiz\fonts\Crang.ttf') format('truetype');
+    src: url(/LucilaMercadoRuiz/fonts/Crang.ttf);
 }
 
 @font-face {
     font-family: 'subtitulo';
-    src: url('C:\Luz\MercadoLucila\LucilaMercadoRuiz\fonts\Perfect DOS VGA 437 Win.ttf') format('truetype'),
-         url('C:\Luz\MercadoLucila\LucilaMercadoRuiz\fonts\Perfect DOS VGA 437.ttf') format('truetype');
+    src: url(/LucilaMercadoRuiz/fonts/Perfect\ DOS\ VGA\ 437.ttf);
 }
 
 h2 {
