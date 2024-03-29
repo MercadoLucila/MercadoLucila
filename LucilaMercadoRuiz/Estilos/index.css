@@ -7,27 +7,28 @@ body {
 
 h1 {
     position: relative;
-    top: 20px;
+    top: 5vh;
     text-align: left;
-    font-size: 70px;
+    font-size: 10vh;
     font-family: 'Titulo';
-    margin-left: 20px;
-    height: 90px;
+    margin-left: 3vh;
+    height: 15vh;
     display: flex;
     flex-flow: left;
     flex-direction: left;
     justify-content: left;
     justify-items: left;
-    background: linear-gradient(to right, rgb(18, 3, 26) 15%, rgb(58, 2, 46), rgb(161, 2, 2),yellow,rgb(255, 213, 76), rgb(255, 203, 60));
-    padding: 20px 20px 0 30px;
+    background: linear-gradient(to right, rgb(27, 0, 34) 15%, rgb(58, 2, 46), rgb(161, 2, 2),rgb(255, 174, 0),rgb(255, 157, 76), rgb(255, 138, 60));
+    padding: 5vh 5vh 0 5vh;
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+   
     
 }
 
 .box1 {
-    padding-top: 100px
+    padding-top: 10vh;
 }
 
 @font-face {
@@ -41,7 +42,15 @@ h1 {
 }
 
 .box2 {
-    margin-left: 150px;
+    margin-left: 10vh;
+    background-image: url(/LucilaMercadoRuiz/Estilos/wall.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75vh;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 }
 
 h2 {
@@ -52,5 +61,5 @@ h2 {
 p {
     font-family: 'subtitulo';
     color:bisque;
-    margin-left: 20px;
+    margin-left: 5vh;
 }
