@@ -24,6 +24,8 @@ const personaje = {
 
 console.log('El Personaje '+ personaje.name +' está '+ personaje.status)
 
+
+
 //console.log(personaje);//
 //console.log (personaje.origin.url);//
 
