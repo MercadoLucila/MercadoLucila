@@ -56,10 +56,21 @@ h1 {
 h2 {
     font-family: 'subtitulo';
     color: #fff;
+    margin-left: 5vw;
 }
 
 p {
     font-family: 'subtitulo';
     color:bisque;
     margin-left: 5vh;
+}
+
+button {
+    color:rgb(255, 255, 255);
+    margin-left: 25vw;
+    margin-top: 5vh;
+    background: linear-gradient(to right, rgb(27, 0, 34) 15%, rgb(58, 2, 46), rgb(118, 52, 2)) ;
+    border: solid 1px rgb(0, 0, 0);
+    height: 5vh;
+    width: 15vw;
 }
