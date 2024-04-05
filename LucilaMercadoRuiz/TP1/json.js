@@ -22,10 +22,13 @@ const personaje = {
     "created": "2017-12-27T18:47:44.566Z"
 }
 
+console.log('El Personaje '+ personaje.name +' está '+ personaje.status)
+
 //console.log(personaje);//
 //console.log (personaje.origin.url);//
 
-const jugador={
+
+/*const jugador={
     "nombre": "Nahuel",
     "Apellido": "barrios",
     "apodo":"perrito",
@@ -33,6 +36,6 @@ const jugador={
     "clubes": ["San Lorenzo","Boca","River"],
     "activo": true,
     "sueldo": 100000.99,
-}
+}*/
 
-console.log(jugador.clubes[0])
+//console.log(jugador.clubes[0])
