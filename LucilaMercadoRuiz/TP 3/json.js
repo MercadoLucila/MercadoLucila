@@ -9,37 +9,18 @@ function boton() {
 
             if (gen1==gen2) {
                 
-                document.getElementById("name1").innerHTML= `
-                <div>
-                    <p>${data[0].nombre}</p>
-                    <img src=${data[0].image}></img>
-                </div>
-
-                <img url="/LucilaMercadoRuiz/TP 3/check.png"></img>
-
-                <div>
-                    <p>${data[1].nombre}</p>
-                    <img src=${data[1].image}></img>
-                </div>
-
-                `
+                document.getElementById("name1").innerHTML= `<p>${data[0].name}</p>`
+                document.getElementById("img1").innerHTML=`<img src=${data[0].image}></img>`
+                document.getElementById("comparativa").innerHTML=`<img src="/LucilaMercadoRuiz/TP 3/css/check.png"></img>`
+                document.getElementById("name2").innerHTML=`<p>${data[1].name}</p>`
+                document.getElementById("img2").innerHTML=`<img src=${data[1].image}></img>`   
             }
             else {
-                document.getElementById("name1").innerHTML= `
-                <div>
-                    <p>${data[0].nombre}</p>
-                    <img src=${data[0].image}></img>
-                </div>
-
-                <img url="/LucilaMercadoRuiz/TP 3/no.png"></img>
-
-                <div>
-                    <p>${data[1].nombre}</p>
-                    <img src=${data[1].image}></img>
-                </div>
-
-                `
-                
+                document.getElementById("name1").innerHTML= `<p>${data[0].name}</p>`
+                document.getElementById("img1").innerHTML=`<img src=${data[0].image}></img>`
+                document.getElementById("comparativa").innerHTML=`<img src="/LucilaMercadoRuiz/TP 3/css/no.png" ></img>`
+                document.getElementById("name2").innerHTML=`<p>${data[1].name}</p>`
+                document.getElementById("img2").innerHTML=`<img src=${data[1].image}></img>`
             }
         })
 }
