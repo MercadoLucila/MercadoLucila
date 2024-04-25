@@ -2,3 +2,19 @@
     height: 50vh; 
     width: 50vw;
 }
+
+html {
+    background-color: rgb(30, 15, 54);
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+}
+
+.botoncito {
+    padding: 5vh;
+    margin: 5vh 5vh 5vh 5vh;
+    display: flex;
+    flex-direction: column;
+}

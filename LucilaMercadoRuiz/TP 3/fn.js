@@ -26,4 +26,8 @@ function boton() {
                 var marker = L.marker([longitude, latitude]).addTo(map);
           
         })
+
+        .catch (error => { console.log (error)
+            document.getElementById('error').innerHTML = "error: " + (error) ;
+})
 }
