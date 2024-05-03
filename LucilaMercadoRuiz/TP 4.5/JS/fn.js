@@ -2,11 +2,13 @@ primerArray = []
 segundoArray = []
 
 function primerBusqueda(){
+
     if (primerArray.length<3){
         primerArray.push(Number(document.getElementById("primerInput").value))
     }
     if (primerArray.length==3){
         document.getElementById("primerInput").disabled = true
+        console.log(primerArray)
 
         if (segundoArray.length==3){
 
@@ -18,12 +20,13 @@ function primerBusqueda(){
 }
 
 function segundaBusqueda(){
+
     if(segundoArray.length<3){
         segundoArray.push(Number(document.getElementById("segundoInput").value))
     }
     if (segundoArray.length==3){
         document.getElementById("segundoInput").disabled = true
-
+        console.log(segundoArray)
         if (primerArray.length==3){
 
             buscarRick()
@@ -31,16 +34,16 @@ function segundaBusqueda(){
     }
 }
 
-function buscarRick(){
-    let url="https://rickandmortyapi.com/api/character/"+primerArray+","+segundoArray
-    fetch(url)
-    .then(result => result.json())
-    .then(data => {
+function buscarRick(){ 
 
-        document.getElementById("imagenesPrimerGrupo").innerHTML=`<img src="${data[0].image}"></img><img src="${data[1].image}"></img><img src="${data[2].image}"></img>`
-        
-        document.getElementById("imagenesSegundoGrupo").innerHTML=`<img src="${data[3].image}"></img><img src="${data[4].image}"></img><img src="${data[5].image}"></img>`
+    const ids=primerArray.concat(segundoArray)
+
+    fetch("https://rickandmortyapi.com/api/character/"+ids)
+        .then(result => result.json())
+        .then(data => {
+
+            document.getElementById("imagenesPrimerGrupo").innerHTML=`<img src="${data[5].image}"></img>`
+                
+        })   
     
-    })
-
 }
