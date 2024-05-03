@@ -27,6 +27,7 @@ function segundaBusqueda(){
     if (segundoArray.length==3){
         document.getElementById("segundoInput").disabled = true
         console.log(segundoArray)
+        
         if (primerArray.length==3){
 
             buscarRick()
@@ -36,14 +37,29 @@ function segundaBusqueda(){
 
 function buscarRick(){ 
 
-    const ids=primerArray.concat(segundoArray)
-
-    fetch("https://rickandmortyapi.com/api/character/"+ids)
-        .then(result => result.json())
+    fetch(`https://rickandmortyapi.com/api/character/${primerArray[0]},${primerArray[1]},${primerArray[2]}`)
+        .then(response => response.json())
         .then(data => {
 
-            document.getElementById("imagenesPrimerGrupo").innerHTML=`<img src="${data[5].image}"></img>`
-                
+            console.log(data)
+
+            document.getElementById("imagenesPrimerGrupo").innerHTML=`<img src="${data[0].image}"></img>`
+            
         })   
     
 }
+
+/*   for (i=0; i<6; i++) {
+
+                if (data[i].id==primerArray[0]) {
+                    document.getElementById("imagenesPrimerGrupo").innerHTML=`<img src="${data[i].image}"></img>`
+                }
+            }
+            for (j=0; j<6; j++) {
+
+                if (data[j].id==primerArray[1]) {
+                    document.getElementById("imagenesPrimerGrupo").innerHTML=`<img src="${data[j].image}"></img>`
+                }
+            }
+           
+*/
