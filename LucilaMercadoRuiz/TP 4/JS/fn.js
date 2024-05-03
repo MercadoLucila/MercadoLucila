@@ -1,16 +1,16 @@
 let array =[];
-let cont = 0;
 let mayor = 0;
 
 function buscar() {
        
-    if (cont<10){
-        array[cont] = Number(document.getElementById("numeros").value)
-       
-            if (array[cont]>mayor) {
-                mayor=array[cont];
+    if (array.length<10){
+        array.push(Number(document.getElementById("numeros").value))
+
+            if ((Number(document.getElementById("numeros").value))>mayor){
+                
+                mayor=Number(document.getElementById("numeros").value)
+
             }
-       cont++
     }
 
     console.log(array)
@@ -20,33 +20,34 @@ function buscar() {
 
 function rickapi(mayor) {
 
-    let urlrick="https://rickandmortyapi.com/api/character/"+mayor;
-    let urlrandom="https://randomuser.me/api/"; 
+    if (cont==10){
 
-    fetch(urlrick)
-        .then(result => result.json())
-        .then(data =>{
+        let urlrick="https://rickandmortyapi.com/api/character/"+mayor;
+        let urlrandom="https://randomuser.me/api/"; 
 
-            console.log(data)
-            let genero = data.species
-            if(genero="Human"){
+        fetch(urlrick)
+            .then(result => result.json())
+            .then(DataRickAndMorty =>{
 
-                let imagen = data.image
+                let genero = DataRickAndMorty.species
 
-                document.getElementById("foto").innerHTML=imagen
-            }
-        })
-    
-    fetch (urlrandom)
-        .then(result => result.json())
-        .then(data =>{
+                console.log(genero)
 
-            if(genero="Human"){
+                if(genero="Human"){
 
-                let imagen2 = data.picture
+                    document.getElementById("foto").innerHTML=`<img src="${DataRickAndMorty.image}"></img>`
+                }
+            })
+        
+        fetch (urlrandom)
+            .then(result => result.json())
+            .then(DataRandomUser =>{
+                
+                if(genero="Human"){
 
-                document.getElementById("datos").innerHTML=imagen2
-            }
+                    document.getElementById("datos").innerHTML=`<img src="${DataRandomUser.results[0].picture.large}"></img>`
+                }
 
-        })
+            })
+    }
 }
