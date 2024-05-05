@@ -1,6 +1,9 @@
 primerArray = []
 segundoArray = []
 imagenes = []
+const imagenesA = document.getElementById("imagenesA");
+const imagenesB = document.getElementById("imagenesB");
+
 function primerBusqueda(){
 
     let valor=Number(document.getElementById("primerInput").value)
