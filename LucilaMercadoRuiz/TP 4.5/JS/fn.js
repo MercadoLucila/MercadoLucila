@@ -1,23 +1,21 @@
 primerArray = []
 segundoArray = []
-imagenes = []
-const imagenesA = document.getElementById("imagenesA");
-const imagenesB = document.getElementById("imagenesB");
 
 function primerBusqueda(){
 
     let valor=Number(document.getElementById("primerInput").value)
 
-    if (primerArray.includes(valor)){
-        alert("No se permiten valores repetidos! >:(")
-    }
+    if (valor=="" || primerArray.includes(valor) || valor<=0 ){
+        alert("No se permiten valores vacíos, repetidos, ceros o negativos >:(")
+    }    
 
-    if (primerArray.length<3 && primerArray.includes(valor)==false){
+    if (primerArray.length<3 && primerArray.includes(valor)==false && valor!=""){
         primerArray.push(valor)
     }
 
     if (primerArray.length==3){
         document.getElementById("primerInput").disabled = true
+        document.getElementById("primerBoton").disabled = true
         console.log(primerArray)
 
         if (segundoArray.length==3){
@@ -33,17 +31,18 @@ function segundaBusqueda(){
 
     let valor2=Number(document.getElementById("segundoInput").value)
 
-    if (segundoArray.includes(valor2)){
-        alert("No se permiten valores repetidos! >:(")
-    }
+    if (valor2=="" || primerArray.includes(valor2) || valor2<=0 ){
+        alert("No se permiten valores vacíos, repetidos, ceros o negativos >:(")
+    }    
 
-
-    if(segundoArray.length<3 && segundoArray.includes(valor2)==false){
+    if(segundoArray.length<3 && segundoArray.includes(valor2)==false && valor2!=""){
         segundoArray.push(valor2)
     }
 
     if (segundoArray.length==3){
         document.getElementById("segundoInput").disabled = true
+        document.getElementById("segundoBoton").disabled = true
+
         console.log(segundoArray)
         
         if (primerArray.length==3){
@@ -53,63 +52,34 @@ function segundaBusqueda(){
     }
 }
 
-function buscarRick(){ 
-
-    fetch("https://rickandmortyapi.com/api/character/"+primerArray+","+segundoArray)
+function buscarRick(){
+    var ids = primerArray.concat(segundoArray);
+    let url="https://rickandmortyapi.com/api/character/"+primerArray+","+segundoArray;
+    fetch(url)
         .then(response => response.json())
         .then(data => {
 
-            console.log("https://rickandmortyapi.com/api/character/"+primerArray+","+segundoArray)
-            console.log(data)
+            console.log(url)
 
-                let cont=0;
+            var primerOrden = []
+            var segundoOrden = []
+            var arrayIds = []
 
-                for (i=0; cont<6 ;i++){
-                    primerArray.forEach((element) => if (data[i].id==(element)){
-                        imagenes[cont]=data[i].image
-				        cont++
-                        }
-                    );
-                   /* if (data[i].id==primerArray[1]){
-                        imagenes[1]=data[i].image
-                    }
-                    if (data[i].id==primerArray[2]){
-                        imagenes[2]=data[i].image
-                    }
-                    if (data[i].id==segundoArray[0]){
-                        imagenes[3]=data[i].image
-                    }
-                    if (data[i].id==segundoArray[1]){
-                        imagenes[4]=data[i].image
-                    }
-                    if (data[i].id==segundoArray[2]){
-                        imagenes[5]=data[i].image
-                    } */
+            for(i=0; i<ids.length ;i++){
+                arrayIds[i]=data[i].id
                 }
 
-                if (imagenes.length==3){               
-                    document.getElementById("imagenesPrimerGrupo").innerHTML=`<img src="${imagenes[0]}"></img><img src="${imagenes[1]}"></img><img src="${imagenes[2]}"></img>`
-                    document.getElementById("imagenesSegundoGrupo").innerHTML=`<img src="${imagenes[3]}"></img><img src="${imagenes[4]}"></img><img src="${imagenes[5]}"></img>`
+            for(i=0; i<primerArray.length ;i++){
+                for(j=0; j<arrayIds.length ;j++){
+                    primerOrden[i]=arrayIds.indexOf(primerArray[i]);
+                    segundoOrden[i]=arrayIds.indexOf(segundoArray[i]);
                     }
+                }
 
-        })   
-    
+            console.log(primerOrden)
+            console.log(segundoOrden)
+
+            document.getElementById("imagenesA").innerHTML = `<img src="${data[primerOrden[0]].image}"></img><img src="${data[primerOrden[1]].image}"></img><img src="${data[primerOrden[2]].image}"></img>`
+            document.getElementById("imagenesB").innerHTML = `<img src="${data[segundoOrden[0]].image}"></img><img src="${data[segundoOrden[1]].image}"></img><img src="${data[segundoOrden[2]].image}"></img>`
+        })
 }
-
-/*   
-fetch(`https://rickandmortyapi.com/api/character/${primerArray[0]},${primerArray[1]},${primerArray[2]}`)
-
-for (i=0; i<6; i++) {
-
-                if (data[i].id==primerArray[0]) {
-                    document.getElementById("imagenesPrimerGrupo").innerHTML=`<img src="${data[i].image}"></img>`
-                }
-            }
-            for (j=0; j<6; j++) {
-
-                if (data[j].id==primerArray[1]) {
-                    document.getElementById("imagenesPrimerGrupo").innerHTML=`<img src="${data[j].image}"></img>`
-                }
-            }
-           
-*/
