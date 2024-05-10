@@ -1,4 +1,18 @@
 .box {
     display: flex;
-    background-color: rgb(125, 89, 158);
+    justify-content: space-around;
+    padding: 20vh;
+}
+
+body {
+    background-color: rgb(40, 61, 78);
+    color: aqua;
+
+}
+
+.input {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(45, 46, 58);
+    color: rgb(54, 68, 80);
 }

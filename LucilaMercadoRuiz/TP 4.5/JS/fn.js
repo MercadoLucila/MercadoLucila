@@ -5,17 +5,18 @@ function primerBusqueda(){
 
     let valor=Number(document.getElementById("primerInput").value)
 
-    if (valor=="" || primerArray.includes(valor) || valor<=0 ){
+    if (valor=="" || primerArray.includes(valor) || segundoArray.includes(valor) ||valor<=0  ){
         alert("No se permiten valores vacíos, repetidos, ceros o negativos >:(")
     }    
 
-    if (primerArray.length<3 && primerArray.includes(valor)==false && valor!=""){
+    if (primerArray.length<3 && primerArray.includes(valor)==false && primerArray.includes(valor)==false && valor!="" && Math.sign(valor)==1 ){
         primerArray.push(valor)
     }
 
     if (primerArray.length==3){
         document.getElementById("primerInput").disabled = true
         document.getElementById("primerBoton").disabled = true
+        
         console.log(primerArray)
 
         if (segundoArray.length==3){
@@ -31,11 +32,11 @@ function segundaBusqueda(){
 
     let valor2=Number(document.getElementById("segundoInput").value)
 
-    if (valor2=="" || primerArray.includes(valor2) || valor2<=0 ){
+    if (valor2=="" || segundoArray.includes(valor2) || primerArray.includes(valor2) ||valor2<=0  ){
         alert("No se permiten valores vacíos, repetidos, ceros o negativos >:(")
     }    
 
-    if(segundoArray.length<3 && segundoArray.includes(valor2)==false && valor2!=""){
+    if(segundoArray.length<3 && segundoArray.includes(valor2)==false && primerArray.includes(valor2)==false && valor2!="" && Math.sign(valor2)==1 ){
         segundoArray.push(valor2)
     }
 
@@ -59,8 +60,6 @@ function buscarRick(){
         .then(response => response.json())
         .then(data => {
 
-            console.log(url)
-
             var primerOrden = []
             var segundoOrden = []
             var arrayIds = []
@@ -79,7 +78,12 @@ function buscarRick(){
             console.log(primerOrden)
             console.log(segundoOrden)
 
-            document.getElementById("imagenesA").innerHTML = `<img src="${data[primerOrden[0]].image}"></img><img src="${data[primerOrden[1]].image}"></img><img src="${data[primerOrden[2]].image}"></img>`
-            document.getElementById("imagenesB").innerHTML = `<img src="${data[segundoOrden[0]].image}"></img><img src="${data[segundoOrden[1]].image}"></img><img src="${data[segundoOrden[2]].image}"></img>`
+            for(i=0; i<primerArray.length ;i++){
+                document.getElementById("imagenesA").innerHTML += `<img src="${data[primerOrden[i]].image}"></img>`
+                document.getElementById("imagenesB").innerHTML += `<img src="${data[segundoOrden[i]].image}"></img>`
+                }
+            
+            
         })
+        
 }
