@@ -17,10 +17,10 @@
             <input id="surname" type="text" placeholder="Ej:Ramirez" required>
        
             <label>Fecha de Nacimiento</label>
-            <input id="birthdate" type="date" placeholder="d/m/a">
+            <input id="birthdate" type="date" required>
         
             <button onclick="registrar()">REGISTRAR</button>
-            
+            <div id="resultado"></div>
         </div>
     </div>
 
@@ -30,12 +30,13 @@
         <div>
             <label>Monto</label>
             <input id="montoDepositado" type="number">
-            <div id="mensajeD"></div>
         </div>
 
         <div>
-            <button onclick="depositarMonto()">DEPOSITAR</button>
+            <button id="botonD" onclick="depositarMonto()">DEPOSITAR</button>
         </div>
+
+        <div id="resultadoD"></div>
 
     </div>
 
@@ -49,10 +50,12 @@
         </div>
 
         <div>
-            <button onclick="retirarMonto()">RETIRAR</button>
+            <button id="botonR" onclick="retirarMonto()">RETIRAR</button>
         </div>
+        
+        <div id="resultadoR"></div>
     </div>
 
 </body>
-<script src="/Practica6/index.html"
+<script src="JS/fn.js"></script>
 </html>
