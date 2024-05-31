@@ -1,0 +1,14 @@
+button{
+    margin: 2vw;
+    padding: 1vw;
+}
+
+div {
+    margin:1vw;
+}
+
+.generos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+}
