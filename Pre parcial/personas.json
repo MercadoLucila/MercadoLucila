@@ -3,62 +3,6 @@
         {
             "gender": "male",
             "name": {
-                "title": "Ms",
-                "first": "Léane",
-                "last": "Hubert"
-            },
-            "location": {
-                "street": {
-                    "number": 7814,
-                    "name": "Avenue Debrousse"
-                },
-                "city": "Colombes",
-                "state": "Loir-et-Cher",
-                "country": "France",
-                "postcode": 48548,
-                "coordinates": {
-                    "latitude": "-19.6962",
-                    "longitude": "57.7629"
-                },
-                "timezone": {
-                    "offset": "-12:00",
-                    "description": "Eniwetok, Kwajalein"
-                }
-            },
-            "email": "leane.hubert@example.com",
-            "login": {
-                "uuid": "a7f0c048-6b94-4fc5-a133-d5646c993203",
-                "username": "bluesnake429",
-                "password": "carroll",
-                "salt": "UJr0Vw6h",
-                "md5": "1ac6f6f25923f5d05bcbf200e65a61a9",
-                "sha1": "a94f4cbffe3a7f5aa4b387aa395bd3c40bbb21c6",
-                "sha256": "3d9ebb322992ebc6337d35765310658b80c7d9bcd8c6a4f14c2a6c03c82b7361"
-            },
-            "dob": {
-                "date": "1969-03-20T16:00:04.310Z",
-                "age": 55
-            },
-            "registered": {
-                "date": "2008-03-06T04:27:27.821Z",
-                "age": 16
-            },
-            "phone": "04-65-21-02-00",
-            "cell": "06-07-14-99-58",
-            "id": {
-                "name": "INSEE",
-                "value": "2690280346838 51"
-            },
-            "picture": {
-                "large": "https://randomuser.me/api/portraits/women/39.jpg",
-                "medium": "https://randomuser.me/api/portraits/med/women/39.jpg",
-                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/39.jpg"
-            },
-            "nat": "FR"
-        },
-        {
-            "gender": "male",
-            "name": {
                 "title": "Mr",
                 "first": "Elliot",
                 "last": "Mitchell"
