@@ -3,7 +3,7 @@
 
 I'm Lucila Mercado Ruiz! i'm a Junior Fullstack Developer, Analyst, and Illustrator. I enjoy building creative solutions, analyzing data, and bringing ideas to life through code and art.
 
-<div style="display: flex; align-items: center;">
+<div style="display: flex; align-item: row;">
   <div>
     <h3>About Me</h3>
     <ul> 🔭 I’m currently working as an instructor: teaching programming, databases, and digital illustration.</ul>
