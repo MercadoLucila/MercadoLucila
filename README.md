@@ -5,7 +5,7 @@ I'm Lucila Mercado Ruiz! i'm a Junior Fullstack Developer, Analyst, and Illustra
 
 <table>
   <tr>
-    <td>
+    <td style:"border:none;">
     <h3>About Me</h3>
     <ul> 🔭 I’m currently working as an instructor: teaching programming, databases, and digital illustration.</ul>
     <ul>🌱 I’m currently learning React, PowerBI</ul>
@@ -14,7 +14,7 @@ I'm Lucila Mercado Ruiz! i'm a Junior Fullstack Developer, Analyst, and Illustra
     <ul>💬 Ask me about programming fundamentals, database design, or digital illustration techniques.</ul>
     <ul>📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/lucila-mercado-ruiz-98729a276/) | [Email](mailto:mercadoruizlucila@gmail.com) </ul>
   </td>
-    <td>
+    <td style:"border:none;">
       <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExc255OTV6YnBrYjJndHFnbXRxcG5zdzdvODdrNHk2Yms1aDFwN2p6YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Iyv6lP8bywITmDkGe8/giphy.gif" width="200" alt="GIF"/>
     </td>
   </tr>
