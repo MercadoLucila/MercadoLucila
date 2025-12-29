@@ -3,9 +3,7 @@
 
 I'm Lucila Mercado Ruiz! I'm a Junior Fullstack Developer, Analyst, and Illustrator. I enjoy building creative solutions, analyzing data, and bringing ideas to life through code and art.
 
-<table border="0">
-  <tr>
-    <td style="border:none; vertical-align:top;">
+<div>
       <h3>About Me</h3>
       <ul>
         <li>🔭 I’m currently working as an instructor: teaching programming, databases, and digital illustration.</li>
@@ -15,11 +13,6 @@ I'm Lucila Mercado Ruiz! I'm a Junior Fullstack Developer, Analyst, and Illustra
         <li>💬 Ask me about programming fundamentals, database design, or digital illustration techniques.</li>
         <li>📫 How to reach me: <a href="https://www.linkedin.com/in/lucila-mercado-ruiz-98729a276/">LinkedIn</a> | <a href="mailto:mercadoruizlucila">Email</a></li>
       </ul>
-    </td>
-    <td style="border:none; vertical-align:top;">
-      <img src="https://media.giphy.com/media/Iyv6lP8bywITmDkGe8/giphy.gif" width="200" alt="GIF"/>
-    </td>
-  </tr>
-</table>
+</div>
 
 
