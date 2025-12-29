@@ -1,4 +1,4 @@
-![Banner](./banner.jpeg)
+![Banner](./banner_v2.png)
 ## Hi! Nice to meet you!👋
 
 I'm Lucila Mercado Ruiz! I'm a Junior Fullstack Developer, Analyst, and Illustrator. I enjoy building creative solutions, analyzing data, and bringing ideas to life through code and art.
